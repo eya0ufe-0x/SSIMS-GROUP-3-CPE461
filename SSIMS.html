@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="SSIMS.css">
+
+    
+    <script
+    defer
+      src="https://kit.fontawesome.com/37eb870e00.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+
+    <!--  Navigation -->
+        <section class="header">
+        <nav class="navbar">
+                <img src="img/logo.png" alt="SSIMS LOGIN" width="120px" height="auto">
+            <div class="navlinks" id="navLinks">
+                <ul class="navlist">
+                <div class="icons"><i class="fa-solid fa-xmark" onclick="hideMenu()"></i></div>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#review">Reviews</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            </div>
+            <div class="icons">
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i></div>
+        </nav>
+
+        <div class="text">
+            <h1>Welcome to SSIMS</h1>
+        <p>Connecting Computer Engineering students with companies for SIWES & Internship placements</p>
+        <a href="login.html">
+        <button onclick="scrollToLogin" class="button">Get Started</button>
+        </a>
+        </div>
+        </section>
+
+     
+
+    <!--  Features Section -->
+      <section id="features" class="features">
+      <h2 class="h2">Platform Features</h2>
+      <div class="feature-grid">
+        <div class="feature">
+            <img src="img/student.png" alt="Student profile" class="student_image">
+            <div class="student_pa">
+            <p>Student Profile</p>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="img/business.png" alt="Company offers" class="student_image1">
+            <div class="student_pa">
+            <p>Company Offers</p>
+        </div>
+        </div>
+        <div class="feature">
+            <img src="img/progress.png" alt="Progress tracking" class="student_image">
+            <div class="student_pa">
+            <p>Progress Tracking</p></div>
+        </div>
+        <div class="feature">
+            <img src="img/supervisor.png" alt="Supervisor evaluation" class="student_image" class="supervisor">
+            <div class="student_pa">
+            <p>Supervisor Evaluation</p></div>
+        </div>
+        <div class="feature">
+            <img src="img/report.png" alt="Reports and analytics" class="student_image">
+            <div class="student_pa">
+            <p>Reports & Analytics</p></div>
+        </div>
+      </div>
+      </section>
+
+        <!-- Testimonial Sections -->
+        <section id="review" class="testimonials">
+            <h2 class="h2">What Our Student Say</h2>
+            <div class="review">
+                
+            <div class="reviews">
+                <img src="img/student1.png" alt="Student1">
+                <div>
+                <p>SSIMS made my Siwes placement stress-free! </p>  
+                <h3>Aisha Bello</h3> 
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                </div>
+                </div>   
+
+            <div class="reviews">
+                <img src="img/student2.png" alt="Student2">
+                <div>
+                <p>SSIMS really supported my search for SIWES placement easier</p>
+                <h3>David Brown</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half"></i>
+            </div>  
+            </div>
+
+            <div class="reviews">
+                <img src="img/student3.png" alt="Student3">
+                <div>
+                <p>SSIMS helped me secure an amazing internship opportunity!</p>
+                <h3>Sarah Williams</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+                </div>
+            </div>
+            
+            </div>
+        </section>
+
+        <!-- About Section -->
+         <div class="about" id="about">
+            <div class="container">
+                <div class="content_section">
+                    <div class="title">
+                        <h2>About SSIMS</h2>
+                    </div>
+                    <div class="content">
+                        <h3>Welcome to SSIMS</h3>
+                        <p class="about_p">SSIMS is dedicated to bridging the gap between Computer Engineering students and industry partners. We streamline the SIWES and internship placement process, making it easier for students to find meaningful opportunities and for companies to discover talented engineers.<br><b><i>Our mission is to create a seamless platform that connects academic excellence with real-world experience, fostering growth for both students and organizations.</i></b></p>
+                    <div class="button2">
+                        <a href="">Read More</a>
+                    </div>
+                    </div>
+                    <div class="socail">
+                       <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a> 
+                    </div>
+                </div>
+                <div class="image_section">
+                    <img src="img/logo.png" alt="SSIMS Logo" class="image_section-logo">
+                </div>
+            </div>
+         </div>
+
+      
+
+
+       
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 SSIMS. All rights reserved</p>
+        </footer>
+
+        <script src="SSIMS.js"></script>
+
+        <script>
+
+    var navList = document.getElementById("navLinks");
+
+    function showMenu() {
+        navList.style.right = "0";
+    }
+    function hideMenu() {
+        navList.style.right = "-200px";
+    }
+
+    </script>
+
+</body>
+</html>
