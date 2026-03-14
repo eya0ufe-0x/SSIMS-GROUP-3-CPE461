@@ -1,0 +1,74 @@
+# Software Design Document – SSIMS (Smart SIWES & Internship Management System)
+
+*UML must be designed* (see sections 8 & 9)
+
+## 1. Software Design Document
+This document provides a complete overview of the SSIMS web application.
+
+## 2. Name of those on the software team
+- Peace - [ENG2204369] – Lead Developer (Frontend + Documentation)  
+- [Team Member 2 Full Name] [Matric Number] – Co-Developer  
+- [Team Member 3 Full Name] [Matric Number] – Co-Developer  
+(Replace with your actual team)
+
+## 3. Roles of each member
+- *Peace [Matric]* – Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, wrote this documentation, and managed the GitHub repository.  
+- *[Member 2]* – Assisted with content and testing.  
+- *[Member 3]* – Assisted with deployment testing.
+
+## 4. Functional Requirements
+- Welcome homepage with “Get Started” button.  
+- Platform Features page (5 static cards).  
+- “What Our Students Say” testimonials.  
+- About SSIMS page.  
+- Student Information Form (First Name, Last Name, Course of Study, Preferred Location dropdown).
+
+## 5. Version
+- SDD Version: 1.0  
+- Software Version: 0.1 (Frontend complete – March 2026)
+
+## 6. UX Requirements
+Clean, simple, responsive design for desktop and mobile.  
+- Mobile-friendly navigation with hamburger menu.  
+- Clear form layout using Bootstrap.  
+- Fast-loading static pages.
+
+*Screenshots of actual pages* (using your real images in the img folder):
+
+![Welcome Page](img/SSIMS1.jpg)  
+![Platform Features](img/business.png)  
+![Testimonials](img/student1.png)  
+![About SSIMS](img/logo.png)  
+![Student Information Form](img/student.png)
+
+## 7. Choose a particular model
+Waterfall Model (detailed in section 16).
+
+## 8. Use class diagrams
+*Class Diagram*  
+Entities: Student (firstName, lastName, courseOfStudy, preferredLocation), Placement (locationName, companyName, description).  
+![Class Diagram](img/class-diagram.png) (create in draw.io and add to img folder)
+
+## 9. Sequence diagram, Context diagram
+*Sequence Diagram*  
+Student fills form → submits → static placements displayed.  
+![Sequence Diagram](img/sequence-diagram.png)
+
+*Context Diagram*  
+Student interacts with SSIMS web app.  
+![Context Diagram](img/context-diagram.png)
+
+## 10. Implementation  
+- *HTML5* – Core structure. Reason: Standard.  
+- *CSS3 + Bootstrap 5* – Styling and responsiveness. Reason: Professional and mobile-ready.  
+- *JavaScript (vanilla)* – ONLY for the mobile navigation toggle menu. Reason: Lightweight.  
+- Backend: In progress (Node.js + Express planned).
+
+## 11. Source Code should be well documented
+Example of the only JavaScript used (mobile menu):
+```html
+<!-- Mobile Navigation Toggle -->
+<button class="navbar-toggler" ...>
+<script>
+// Bootstrap handles the toggle
+</script>
