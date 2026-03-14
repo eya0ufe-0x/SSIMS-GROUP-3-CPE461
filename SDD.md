@@ -46,11 +46,17 @@ The application is a clean, responsive, mobile-friendly single-page style websit
 ![About SSIMS](preview/preview(4).png)  
 ![Student Information Form](preview/preview(5).png)
 
-## 8.*Class Diagram*  
-Entities: Student (firstName, lastName, courseOfStudy, preferredLocation), Placement (locationName, companyName, description).  
-![Class Diagram](img/class-diagram.png) (create in draw.io and add to img folder)
 
-## 9. Sequence diagram, Context diagram
+## 8.UML  Diagram 
+![UML Diagram]()
+
+
+## 9.Class Diagram  
+Entities: Student (firstName, lastName, courseOfStudy, preferredLocation), Placement (locationName, companyName, description).  
+![Class Diagram]()
+
+
+## 10. Sequence diagram, Context diagram
 *Sequence Diagram*  
 Student fills form → submits → static placements displayed.  
 ![Sequence Diagram](img/sequence-diagram.png)
@@ -59,17 +65,14 @@ Student fills form → submits → static placements displayed.
 Student interacts with SSIMS web app.  
 ![Context Diagram](img/context-diagram.png)
 
-## 10. Implementation  
+## 11. Implementation  
 - *HTML5* – Core structure. Reason: Standard.  
 - *CSS3 + Bootstrap 5* – Styling and responsiveness. Reason: Professional and mobile-ready.  
 - *JavaScript (vanilla)* – ONLY for the mobile navigation toggle menu. Reason: Lightweight.  
 - Backend: In progress (Node.js + Express planned).
 
-## 11. Source Code should be well documented
+## 12. Source Code should be well documented
 Example of the only JavaScript used (mobile menu):
-```html
-<!-- Mobile Navigation Toggle -->
-<button class="navbar-toggler" ...>
-<script>
+
 // Bootstrap handles the toggle
 </script>
