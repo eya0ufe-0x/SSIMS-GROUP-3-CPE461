@@ -41,31 +41,102 @@ The application is a clean, responsive, mobile-friendly single-page style websit
 
 
 ## 7.UML  Diagram 
-![UML Diagram](img/UMLdiagram.png)
+```mermaid
+graph LR
+    subgraph "External Actors"
+        Student["Student"]
+        Companies["Companies / SIWES Hosts"]
+    end
+    
+    subgraph "SSIMS System"
+        Form["Student Information Form<br>(Name, Course, Preferred Location)"]
+        PlacementDB["Job Search"]
+    end
+
+    Student -->|Submit Details| Form
+    Form -->|Filters by Preferred Location| PlacementDB
+    PlacementDB -->|Displays Available Placements| Student
+    
+    Companies -.->|Provides Placement Data| PlacementDB
+```
 
 
 ## 8.Class Diagram  
 **Entities:**
 - Student (firstName, lastName, courseOfStudy, preferredLocation)
-- Placement (locationName, companyName, description).  
-![Class Diagram]()
+- Placement (locationName, companyName, description, slotsAvailable).
+- Company (name, address)
+```mermaid
+classDiagram
+    class Student {
+        +String firstName
+        +String lastName
+        +String courseOfStudy
+        +String preferredLocation
+    }
+    class Placement {
+        +String locationName
+        +String companyName
+        +String description
+        +int slotsAvailable
+    }
+    class Company {
+        +String name
+        +String address
+    }
+
+    Student "1" --> "0..*" Placement : applies for
+    Placement "0..*" --> "1" Company : offered by
+```  
 
 
 ## 9. Sequence diagram, Context diagram
-*Sequence Diagram*  
+**Sequence Diagram** <br>
 Student fills form → submits → static placements displayed.  
-![Sequence Diagram](img/sequence-diagram.png)
+```mermaid
+sequenceDiagram
+    participant Student
+    participant SSIMS as SSIMS Web App
+    participant PlacementData as Placement Data
 
-*Context Diagram*  
+    Student->>SSIMS: Opens Student Information Form
+    Student->>SSIMS: Fills details (First Name, Last Name, Course of Study, Preferred Location)
+    Student->>SSIMS: Clicks Submit
+    SSIMS->>PlacementData: Filters placements by Preferred Location
+    PlacementData-->>SSIMS: Returns matching SIWES placements
+    SSIMS-->>Student: Displays list of available placements
+```
+
+**Context Diagram**  
+
 Student interacts with SSIMS web app.  
-![Context Diagram](img/context-diagram.png)
+    graph TD
+    subgraph External_Actors ["External Actors"] <br>
+        A[Student] <br>
+        B[Company] <br>
+        C[SIWES Coordinator] <br>
+        D[Admin] <br>
+    end
+
+    E[SSIMS Web Application]
+
+    A <--> E
+    B --> E
+    C <--> E
+    D --> E
+    E --> A
+
+    A -. "Fills form & views placements" .-> E
+    B -. "Posts offers" .-> E
+    C -. "Evaluates students" .-> E
+    D -. "Approves placements" .-> E
 
 ## 10. Implementation
 **Programming Languages & Libraries used:**
 - *HTML5* – Structure of all pages. Reason: Standard and semantic.  
 - *CSS3 + Bootstrap 5* – Styling and responsiveness. Reason: Makes the site mobile-friendly and professional with minimal custom code (cards, forms, icons).  
 - *JavaScript (vanilla)* – ONLY for the mobile navigation toggle menu. Reason: Lightweight, no extra framework needed for this simple prototype.  
-- Backend: (Node.js + Express.js planned for real API and database).
+- *Backend* - (Node.js + Express.js planned for real API and database).
 
 Development tools: VS Code + Live Server (port 5500).
 
@@ -142,7 +213,18 @@ c. All pages responsive on phone <br>
 4. Testing
 5. Deployment and Maintenance
 
-   waterfall model diagram
+
+
+```mermaid
+graph TD
+    A[1. Requirements Analysis<br/>Student form + features list] 
+    --> B[2. System Design<br/>Class diagram + Bootstrap UI]
+    B --> C[3. Implementation<br/>HTML/CSS + mobile menu JS]
+    C --> D[4. Testing<br/>Manual form & responsiveness test]
+    D --> E[5. Deployment & Maintenance<br/>GitHub + Live Server<br/>Backend]
+```
+
+**Waterfall Model Diagram adapted for SSIMS**
 
 **REQUIREMENT ANALYSIS PHASE** <br>
 
