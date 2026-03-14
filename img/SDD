@@ -1,41 +1,45 @@
 # Software Design Document – SSIMS (Smart SIWES & Internship Management System)
 
-*UML must be designed* (see sections 8 & 9)
-
 ## 1. Software Design Document
 This document provides a complete overview of the SSIMS web application.
 
 ## 2. Name of those on the software team
-- Peace - [ENG2204369] – Lead Developer (Frontend + Documentation)  
-- [Team Member 2 Full Name] [Matric Number] – Co-Developer  
-- [Team Member 3 Full Name] [Matric Number] – Co-Developer  
-(Replace with your actual team)
+-AIGBOKHABHO PEACE ODEGWUA - [ENG2204369] – Frontend + Documentation
+-OTUYOMA OROGHENEJERE - [ENG2204044] - Backend
+-UKPONG ANDINWAM [ENG2204052] –   
+-IYENGUNMWENA EMMANUEL OSARO [ENG2203994] -
+-CHARLES JOSHUA [ENG2203968] -
+-ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -
+-EHIMARE OSEOJE PRINCE [ENG2102762] -
 
 ## 3. Roles of each member
-- *Peace [Matric]* – Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, wrote this documentation, and managed the GitHub repository.  
-- *[Member 2]* – Assisted with content and testing.  
-- *[Member 3]* – Assisted with deployment testing.
+-AIGBOKHABHO PEACE ODEGWUA – Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, wrote this documentation, and managed the GitHub repository.  
+-OTUYOMA OROGHENEJERE - [ENG2204044] - 
+-UKPONG ANDINWAM [ENG2204052] –   
+-IYENGUNMWENA EMMANUEL OSARO [ENG2203994] -
+-CHARLES JOSHUA [ENG2203968] -
+-ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -
+-EHIMARE OSEOJE PRINCE [ENG2102762] -
 
 ## 4. Functional Requirements
-- Welcome homepage with “Get Started” button.  
-- Platform Features page (5 static cards).  
-- “What Our Students Say” testimonials.  
-- About SSIMS page.  
-- Student Information Form (First Name, Last Name, Course of Study, Preferred Location dropdown).
+- Displaying Welcoming homepage with “Get Started” button.  
+- Show static “Platform Features” page with cards (Student Profile, Company Offers, Progress Tracking, Supervisor Evaluation, Reports & Analytics). 
+- Display “What Our Students Say” testimonials.  
+- Show “About SSIMS” page with mission and logo.  
+- Student Information Form: collect First Name, Last Name, Course of Study, Preferred Location (dropdown), then show available SIWES placements for that location.
 
 ## 5. Version
 - SDD Version: 1.0  
-- Software Version: 0.1 (Frontend complete – March 2026)
+- Software Version: 0.1 (Frontend and Backend)
 
 ## 6. UX Requirements
-Clean, simple, responsive design for desktop and mobile.  
-- Mobile-friendly navigation with hamburger menu.  
-- Clear form layout using Bootstrap.  
-- Fast-loading static pages.
+The application is a clean, responsive, mobile-friendly single-page style website.  
+- Simple and intuitive navigation (Features, Reviews, About, Login links).  
+- Clear form fields with placeholder text.  
+- Modern design using background images and icons.  
+- Fast loading (all static pages).
 
-*Screenshots of actual pages* (using your real images in the img folder):
-
-![Welcome Page](img/SSIMS1.jpg)  
+![Welcome Page]()  
 ![Platform Features](img/business.png)  
 ![Testimonials](img/student1.png)  
 ![About SSIMS](img/logo.png)  
