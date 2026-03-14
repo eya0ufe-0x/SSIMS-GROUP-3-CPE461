@@ -39,17 +39,13 @@ The application is a clean, responsive, mobile-friendly single-page style websit
 - Modern design using background images and icons.  
 - Fast loading (all static pages).
 
-![Welcome Page]()  
-![Platform Features](img/business.png)  
-![Testimonials](img/student1.png)  
-![About SSIMS](img/logo.png)  
-![Student Information Form](img/student.png)
+![Welcome Page](preview(1).png)  
+![Platform Features](preview(2).png)  
+![Testimonials](preview(3).png)  
+![About SSIMS](preview(4).png)  
+![Student Information Form](preview(1).png)
 
-## 7. Choose a particular model
-Waterfall Model (detailed in section 16).
-
-## 8. Use class diagrams
-*Class Diagram*  
+## 8.*Class Diagram*  
 Entities: Student (firstName, lastName, courseOfStudy, preferredLocation), Placement (locationName, companyName, description).  
 ![Class Diagram](img/class-diagram.png) (create in draw.io and add to img folder)
 
