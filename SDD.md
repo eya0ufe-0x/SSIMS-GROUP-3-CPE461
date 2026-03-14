@@ -95,7 +95,7 @@ Development tools: VS Code + Live Server (port 5500).
 ```
 
 ## 12. README
-- See [README](../README.md) in the repository root (project title, how to run with Live Server, link to this SDD).
+- See [README](https://github.com/eya0ufe/SSIMS-GROUP-3-CPE461/main/README.md) in the repository root (project title, how to run with Live Server, link to this SDD).
 
 
 ## 13. GitHub (Version Control)
