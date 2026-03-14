@@ -1,7 +1,7 @@
 # SSIMS – Smart SIWES & Internship Management System <br>
 A web based platform that connect students with companies for SIWES placement, tracking and evaluation.
 
-![SSIMS Logo](img/logo.png) 
+![SSIMS Logo](preview/preview(7).png) 
 
 
 *Connecting Computer Engineering students with SIWES and internship placements* <br>
