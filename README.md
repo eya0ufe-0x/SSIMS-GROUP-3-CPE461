@@ -1,22 +1,21 @@
-# SSIMS – Smart SIWES & Internship Management System
+# SSIMS – Smart SIWES & Internship Management System <br>
 A web based platform that connect students with companies for SIWES placement, tracking and evaluation.
 
-![SSIMS Logo]()  
+![SSIMS Logo](img/logo.png) 
+
 
 *Connecting Computer Engineering students with SIWES and internship placements* <br>
 A simple, clean web platform built for students to easily find and apply for SIWES placements.
 
----
 
-## 📋 Project Overview
+## Project Overview
 SSIMS helps students:
 - View available SIWES placement locations
 - Fill a quick Student Information Form
 - Get matched with companies based on preferred location
 
----
 
-## ✨ Features
+## Features
 - Beautiful welcome page with "Get Started" button
 - Platform Features section (Student Profile, Company Offers, Progress Tracking, Supervisor Evaluation, Reports & Analytics)
 - Real student testimonials ("What Our Students Say")
@@ -24,17 +23,15 @@ SSIMS helps students:
 - Student Information Form (First Name, Last Name, Course of Study, Preferred Location dropdown)
 - Fully responsive design (mobile + desktop) with hamburger menu
 
----
 
-## 🛠 Technologies Used
+## Technologies Used
 - HTML5
 - CSS3 + Bootstrap 5
 - JavaScript (only for mobile navigation toggle menu)
 - No heavy frameworks — kept simple and fast
 
----
 
-## 🚀 How to Run Locally
+## How to Run Locally
 1. Clone or download the repository
 2. Open the folder in *VS Code*
 3. Right-click on SSIMS.html (or your main file) → "Open with Live Server"  
@@ -43,31 +40,28 @@ SSIMS helps students:
 
 No installation needed!
 
----
 
-## 📸 Screenshots
-![Welcome Page](preview/preview(1).png)  
+## Screenshots
+![Welcome Page](preview/preview(1).png) 
 ![Platform Features](preview/preview(2).png)  
 ![Student Testimonials](preview/preview(3).png)  
 ![About SSIMS](preview/preview(4).png)  
 ![Student Information Form](preview/preview(5).png)
 
----
 
-## 📄 Full Documentation
+## Full Documentation
 *Complete Software Design Document* (with UML diagrams, team roles, Waterfall model, testing, etc.):  
 [SOFTWARE_DESIGN_DOCUMENT.md](SDD.md)
 
----
 
-## 👥 Team
-- Aigbokhabho Peace Odegwua - ENG2204369 - Frontend Developer & Documentation
+## Team
+- AIGBOKHABHO PEACE ODEGWUA - ENG2204369 - Frontend Developer & Documentation
+- OTUYOMA OROGHENEJERE - ENG2204044
 - UKPONG ANDINWAM - ENG2204052
 - IYENGUNMWENA EMMANUEL OSARO - ENG2203994
 - CHARLES JOSHUA - ENG2203968
 - ONYEKA CLEVER DUMKELECHUKWU - ENG2204035
-- OTUYOMA OROGHENEJERE - ENG2204044
-- Ehimare Oseoje Prince - ENG2102762
+- EHIMARE OSEOJE PRINCE - ENG2102762
 
 ---
 
