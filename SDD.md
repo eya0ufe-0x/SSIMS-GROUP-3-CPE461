@@ -39,7 +39,8 @@ The application is a clean, responsive, mobile-friendly single-page style websit
 - Modern design using background images and icons.  
 - Fast loading (all static pages).
 
-![Welcome Page](preview/preview(1).png)  
+## 7.Screenshots
+![Welcome Page](preview/preview(1).png)
 ![Platform Features](preview/preview(2).png)  
 ![Testimonials](preview/preview(3).png)  
 ![About SSIMS](preview/preview(4).png)  
