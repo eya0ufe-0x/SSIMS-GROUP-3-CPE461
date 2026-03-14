@@ -4,22 +4,22 @@
 This document provides a complete overview of the SSIMS web application.
 
 ## 2. Name of those on the software team
--AIGBOKHABHO PEACE ODEGWUA - [ENG2204369] – Frontend + Documentation
--OTUYOMA OROGHENEJERE - [ENG2204044] - Backend
--UKPONG ANDINWAM [ENG2204052] –   
--IYENGUNMWENA EMMANUEL OSARO [ENG2203994] -
--CHARLES JOSHUA [ENG2203968] -
--ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -
--EHIMARE OSEOJE PRINCE [ENG2102762] -
+-AIGBOKHABHO PEACE ODEGWUA - [ENG2204369] – Frontend + Documentation <br>
+-OTUYOMA OROGHENEJERE - [ENG2204044] - Backend <br>
+-UKPONG ANDINWAM [ENG2204052] –   <br>
+-IYENGUNMWENA EMMANUEL OSARO [ENG2203994] - <br>
+-CHARLES JOSHUA [ENG2203968] -<br>
+-ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -<br>
+-EHIMARE OSEOJE PRINCE [ENG2102762] -<br>
 
 ## 3. Roles of each member
--AIGBOKHABHO PEACE ODEGWUA – Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, wrote this documentation, and managed the GitHub repository.  
--OTUYOMA OROGHENEJERE - [ENG2204044] - 
--UKPONG ANDINWAM [ENG2204052] –   
--IYENGUNMWENA EMMANUEL OSARO [ENG2203994] -
--CHARLES JOSHUA [ENG2203968] -
--ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -
--EHIMARE OSEOJE PRINCE [ENG2102762] -
+-AIGBOKHABHO PEACE ODEGWUA – Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, wrote this documentation, and managed the GitHub repository.  <br>
+-OTUYOMA OROGHENEJERE - [ENG2204044] - <br>
+-UKPONG ANDINWAM [ENG2204052] –   <br>
+-IYENGUNMWENA EMMANUEL OSARO [ENG2203994] -<br>
+-CHARLES JOSHUA [ENG2203968] -<br>
+-ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] - <br>
+-EHIMARE OSEOJE PRINCE [ENG2102762] - <br>
 
 ## 4. Functional Requirements
 - Displaying Welcoming homepage with “Get Started” button.  
@@ -39,11 +39,11 @@ The application is a clean, responsive, mobile-friendly single-page style websit
 - Modern design using background images and icons.  
 - Fast loading (all static pages).
 
-![Welcome Page](preview(1).png)  
-![Platform Features](preview(2).png)  
-![Testimonials](preview(3).png)  
-![About SSIMS](preview(4).png)  
-![Student Information Form](preview(1).png)
+![Welcome Page](preview/preview(1).png)  
+![Platform Features](preview/preview(2).png)  
+![Testimonials](preview/preview(3).png)  
+![About SSIMS](preview/preview(4).png)  
+![Student Information Form](preview/preview(5).png)
 
 ## 8.*Class Diagram*  
 Entities: Student (firstName, lastName, courseOfStudy, preferredLocation), Placement (locationName, companyName, description).  
