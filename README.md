@@ -26,20 +26,37 @@ SSIMS helps students:
 
 
 ## Technologies Used
-- HTML5
-- CSS3 + Bootstrap 5
-- JavaScript (only for mobile navigation toggle menu)
-- No heavy frameworks — kept simple and fast
+- **Backend**: FastAPI (Python web framework)
+- **Database**: SQLite with SQLModel ORM
+- **Frontend**: HTML5, CSS3, Bootstrap 5, Vanilla JavaScript
+- Responsive design with mobile-first approach
 
 
 ## How to Run Locally
-1. Clone or download the repository
-2. Open the folder in *VS Code*
-3. Right-click on SSIMS.html (or your main file) → "Open with Live Server"  
-   (or just double-click the HTML file to open in any browser)
-4. The app will run on http://127.0.0.1:5500
 
-No installation needed!
+### Backend Setup
+1. Clone the repository
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   ```
+3. Activate the virtual environment:
+   - macOS/Linux: `source venv/bin/activate`
+   - Windows: `venv\Scripts\activate`
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Run the FastAPI server:
+   ```bash
+   uvicorn server.main:app --reload
+   ```
+6. Open your browser and navigate to: http://127.0.0.1:8000
+
+The backend will automatically:
+- Create the SQLite database
+- Seed initial data (companies and courses)
+- Serve the frontend static files
 
 
 ## Screenshots
