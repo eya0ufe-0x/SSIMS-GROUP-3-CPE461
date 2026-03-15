@@ -5,6 +5,7 @@ A web based platform that connect students with companies for SIWES placement, t
 
 
 *Connecting Computer Engineering students with SIWES and internship placements* <br>
+
 A simple, clean web platform built for students to easily find and apply for SIWES placements.
 
 
@@ -50,7 +51,7 @@ No installation needed!
 
 
 ## Full Documentation
-*Complete Software Design Document* (with UML diagrams, team roles, Waterfall model, testing, etc.):  
+**Complete Software Design Document** (with UML diagrams, team roles, Waterfall model, testing, etc.):  
 [SOFTWARE_DESIGN_DOCUMENT.md](SDD.md)
 
 
