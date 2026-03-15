@@ -167,7 +167,7 @@ Development tools: VS Code + Live Server (port 5500).
 
 ## 12. README
 See `README` file in the repository root for:
-- Project deacription
+- Project description
 - How to run with locally (Live Server)
 - All Screenshots
 - Technologies used
