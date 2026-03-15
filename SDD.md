@@ -177,7 +177,7 @@ See `README` file in the repository root for:
 
 
 ## 13. GitHub (Version Control)
-- Repository: [Your GitHub link]
+- Repository: [GitHub link](https://github.com/eya0ufe-0x/SSIMS-GROUP-3-CPE461.git)
 - Used Git with clear commit messages (e.g., “Add images and UML Diagram”, “Create student form page”).
 - Frontend fully pushed and viewable.
 
@@ -198,7 +198,7 @@ c. All pages responsive on phone <br>
 - Report: Everything works as designed; simple scope kept testing straightforward.
 
 
-## 17. SOFTWARE DEVELOPMENT PROCESS MODELS
+## 16. SOFTWARE DEVELOPMENT PROCESS MODELS
 **WATERFALL MODEL**
 - This project is the development of the Smart SIWES & Internship Management System (SSIMS). The Waterfall model was selected because the requirements were very clear and the scope was deliberately kept simple.
 
