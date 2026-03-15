@@ -33,12 +33,12 @@ The application is a clean, responsive, mobile-friendly single-page style websit
 - Fast loading (all static pages).
 
 ## 6.Screenshots
-![Welcome Page](preview/01-landing-page.png)
-![Platform Features](preview/02-landing-page.png)  
-![Testimonials](preview/03-landing-page.png)  
-![About SSIMS](preview/04-landing-page.png)  
-![Student Information Form](preview/Search-page.png)
-![Company Details](preview/Details-page.png)
+![Welcome Page](preview/preview(1).png)
+![Platform Features](preview/preview(2).png)  
+![Testimonials](preview/preview(3).png)  
+![About SSIMS](preview/preview(4).png)
+![Student Information Form](preview/preview(5).png)
+![Company Details](preview/preview(7).png)
 
 
 ## 7.UML  Diagram 
