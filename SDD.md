@@ -4,22 +4,22 @@
 This document provides a complete overview of the SSIMS web application.
 
 ## 2. Name of those on the software team
-- AIGBOKHABHO PEACE ODEGWUA - [ENG2204369] – Frontend + Documentation <br>
-- OTUYOMA OROGHENEJERE - [ENG2204044] - Backend <br>
-- UKPONG ANDINWAM [ENG2204052] –   <br>
-- IYENGUNMWENA EMMANUEL OSARO [ENG2203994] - <br>
-- CHARLES JOSHUA [ENG2203968] -<br>
-- ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -<br>
-- EHIMARE OSEOJE PRINCE [ENG2102762] -<br>
+- AIGBOKHABHO PEACE ODEGWUA - [ENG2204369] – Frontend and Documentation <br>
+- OTUYOMA OROGHENEJERE - [ENG2204044] - Backend and DevOps <br>
+- UKPONG ANDINWAM [ENG2204052] – Sequence and Context Diagrams <br>
+- IYENGUNMWENA EMMANUEL OSARO [ENG2203994] - Development process and immplementation <br>
+- CHARLES JOSHUA [ENG2203968] - Requirements Engineering and Co-testing <br>
+- ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -UML and Class Diagrams <br>
+- EHIMARE OSEOJE PRINCE [ENG2102762] - Testing and Validation <br>
 
 ## 3. Roles of each member
-- AIGBOKHABHO PEACE ODEGWUA – Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, wrote this documentation, and co-managed the GitHub repository.  <br>
-- OTUYOMA OROGHENEJERE - [ENG2204044] - <br>
-- UKPONG ANDINWAM [ENG2204052] –   <br>
-- IYENGUNMWENA EMMANUEL OSARO [ENG2203994] -<br>
-- CHARLES JOSHUA [ENG2203968] -<br>
-- ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] - <br>
-- EHIMARE OSEOJE PRINCE [ENG2102762] - <br>
+- AIGBOKHABHO PEACE ODEGWUA – [ENG2204369] - Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, compiled documentation (README, SDD) for consistency and clarity across projects.  <br>
+- OTUYOMA OROGHENEJERE - [ENG2204044] - Implemented backend functionality, maanaged the Github repository for version control, and oversaw deployment to ensure system was operational and accessible. <br>
+- UKPONG ANDINWAM [ENG2204052] – Created sequence diagrams to illustrate system interactions and context diagrams to define system boundaries. <br>
+- IYENGUNMWENA EMMANUEL OSARO [ENG2203994] - Applied the waterfall model to guide project phases which contributed to both frontend and backend. <br>
+- CHARLES JOSHUA [ENG2203968] - Documented and analyzed functional and non-functional requirements. Additionally, particicpated in testing and validation confirming the application was responsive across multiple devices. <br>
+- ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] - Designed UML and class diagrams to represent system arcitecture and relationships. <br>
+- EHIMARE OSEOJE PRINCE [ENG2102762] - Developed test cases to validate requirements and ensure system quality. <br>
 
 ## 4. Version
 - SDD Version: 1.0  
