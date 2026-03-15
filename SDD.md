@@ -224,7 +224,7 @@ graph TD
     D --> E[5. Deployment & Maintenance<br/>GitHub + Live Server<br/>Backend]
 ```
 
-**Waterfall Model Diagram adapted for SSIMS**
+**WATERFALL MODEL ADAPTED FOR SSIMS**
 
 **REQUIREMENT ANALYSIS PHASE** <br>
 
