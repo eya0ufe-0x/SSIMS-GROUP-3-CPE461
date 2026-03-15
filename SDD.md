@@ -14,7 +14,7 @@ This document provides a complete overview of the SSIMS web application.
 
 ## 3. Roles of each member
 - AIGBOKHABHO PEACE ODEGWUA – [ENG2204369] - Designed and coded the entire frontend (HTML, CSS, Bootstrap), created all pages, implemented the mobile navigation toggle menu, compiled documentation (README, SDD) for consistency and clarity across projects.  <br>
-- OTUYOMA OROGHENEJERE - [ENG2204044] - Implemented backend functionality, maanaged the Github repository for version control, and oversaw deployment to ensure system was operational and accessible. <br>
+- OTUYOMA OROGHENEJERE - [ENG2204044] - Implemented backend functionality, managed the Github repository for version control, and oversaw deployment to ensure system was operational and accessible. <br>
 - UKPONG ANDINWAM [ENG2204052] – Created sequence diagrams to illustrate system interactions and context diagrams to define system boundaries. <br>
 - IYENGUNMWENA EMMANUEL OSARO [ENG2203994] - Applied the waterfall model to guide project phases which contributed to both frontend and backend. <br>
 - CHARLES JOSHUA [ENG2203968] - Documented and analyzed functional and non-functional requirements. Additionally, particicpated in testing and validation confirming the application was responsive across multiple devices. <br>
