@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    
+    <script
+        defer
+        src="https://kit.fontawesome.com/37eb870e00.js"
+        crossorigin="anonymous"
+    ></script>
+    
+    <style>
+        /* Results-specific styling */
+        .results-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .results-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        .results-header h1 {
+            font-size: 32px;
+            color: #004080;
+            margin: 0;
+        }
+        
+        .filter-info {
+            font-size: 14px;
+            color: #7b7b7b;
+            margin-top: 10px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .company-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .company-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 64, 128, 0.15);
+            transform: translateY(-2px);
+            border-color: #004080;
+        }
+        
+        .company-card h3 {
+            font-size: 20px;
+            color: #004080;
+            margin: 0 0 10px 0;
+        }
+        
+        .company-card p {
+            margin: 8px 0;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .company-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #7b7b7b;
+        }
+        
+        .company-location i {
+            color: #004080;
+        }
+        
+        .slots-available {
+            font-size: 16px;
+            font-weight: 600;
+            color: #004080;
+            margin: 12px 0;
+        }
+        
+        .details-button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 12px;
+        }
+        
+        .details-button:hover {
+            background-color: #003060;
+            opacity: 0.9;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .no-results i {
+            font-size: 60px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .no-results h2 {
+            color: #7b7b7b;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .no-results p {
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .back-to-search {
+            display: inline-block;
+            background-color: #004080;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .back-to-search:hover {
+            background-color: #003060;
+            opacity: 0.9;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 18px;
+            color: #7b7b7b;
+        }
+        
+        .error-message {
+            background-color: #fee;
+            border: 1px solid #fcc;
+            border-radius: 4px;
+            padding: 15px;
+            color: #c33;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Results Container -->
+    <div class="results-container">
+        <div class="results-header">
+            <button onclick="window.history.back()" class="back-button">←</button>
+            <div>
+                <h1>Search Results</h1>
+                <p class="filter-info" id="filter-info"></p>
+            </div>
+        </div>
+        
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <i class="fa-solid fa-spinner fa-spin"></i> Loading companies...
+        </div>
+        
+        <!-- Error State -->
+        <div id="error" class="error-message" style="display: none;"></div>
+        
+        <!-- Results Grid -->
+        <div id="results-grid" class="results-grid"></div>
+        
+        <!-- No Results State -->
+        <div id="no-results" class="no-results" style="display: none;">
+            <i class="fa-solid fa-inbox"></i>
+            <h2>No Companies Found</h2>
+            <p>No companies match your search criteria. Try different filters.</p>
+            <a href="/static/search.html" class="back-to-search">Back to Search</a>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                course: params.get('course'),
+                location: params.get('location')
+            };
+        }
+        
+        // Update filter info display
+        function updateFilterInfo() {
+            const { course, location } = getUrlParams();
+            const filterInfo = document.getElementById('filter-info');
+            if (course && location) {
+                filterInfo.textContent = `Filtering by: ${course} in ${location}`;
+            }
+        }
+        
+        // Fetch companies from API
+        async function fetchCompanies() {
+            const { course, location } = getUrlParams();
+            
+            try {
+                // Build query string
+                const params = new URLSearchParams();
+                if (course) params.append('course', course);
+                if (location) params.append('location', location);
+                
+                const url = `/api/companies?${params.toString()}`;
+                
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+                
+                const companies = await response.json();
+                
+                // Hide loading state
+                document.getElementById('loading').style.display = 'none';
+                
+                // Display results or no-results state
+                if (companies.length === 0) {
+                    document.getElementById('no-results').style.display = 'block';
+                } else {
+                    renderCompanies(companies);
+                }
+                
+            } catch (error) {
+                console.error('Error fetching companies:', error);
+                
+                // Hide loading state
+                document.getElementById('loading').style.display = 'none';
+                
+                // Show error message
+                const errorDiv = document.getElementById('error');
+                errorDiv.textContent = `Error loading companies: ${error.message}`;
+                errorDiv.style.display = 'block';
+            }
+        }
+        
+        // Render company cards
+        function renderCompanies(companies) {
+            const grid = document.getElementById('results-grid');
+            grid.innerHTML = ''; // Clear existing content
+            
+            companies.forEach(company => {
+                const card = createCompanyCard(company);
+                grid.appendChild(card);
+            });
+        }
+        
+        // Create a single company card
+        function createCompanyCard(company) {
+            const card = document.createElement('div');
+            card.className = 'company-card';
+            
+            const slotsText = company.slots_available === 1 
+                ? '1 slot available' 
+                : `${company.slots_available} slots available`;
+            
+            card.innerHTML = `
+                <h3>${escapeHtml(company.name)}</h3>
+                <div class="company-location">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <span>${escapeHtml(company.location)}</span>
+                </div>
+                <div class="slots-available">
+                    <i class="fa-solid fa-briefcase"></i> ${slotsText}
+                </div>
+                <p>${escapeHtml(company.description || 'No description available')}</p>
+                <a href="/static/details.html?id=${company.id}" class="details-button">
+                    View Details
+                </a>
+            `;
+            
+            return card;
+        }
+        
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateFilterInfo();
+            fetchCompanies();
+        });
+    </script>
+</body>
+</html>

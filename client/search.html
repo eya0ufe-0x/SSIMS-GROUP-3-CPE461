@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Placements</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+
+    <script
+        defer
+        src="https://kit.fontawesome.com/37eb870e00.js"
+        crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <!--  Search Section -->
+    <section id="login" class="student_info">
+        <div class="student_form">
+            <button onclick="window.history.back()" class="back-button">←</button>
+            <h2 class="student_info_h2">Find Placements</h2>
+            <p class="student_p">Select your course of study and preferred location to see available SIWES placements</p><br><br>
+            <div class="student_form_container">
+                <form action="#" id="studentForms">
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-graduation-cap lock"></i>
+                        <select id="course" name="course" class="location" required>
+                            <option value="">Select Course of Study</option>
+                            <option value="Computer Engineering">Computer Engineering</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Civil Engineering">Civil Engineering</option>
+                        </select>
+                        <div class="arrow"></div>
+                    </div>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-location-pin lock"></i>
+                        <select id="location" name="location" class="location" required>
+                            <option value="">Select Preferred Location</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Abuja">Abuja</option>
+                            <option value="Port Harcourt">Port Harcourt</option>
+                            <option value="Benin City">Benin City</option>
+                            <option value="Enugu">Enugu</option>
+                        </select>
+                        <div class="arrow"></div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="submit"></label>
+                        <input type="submit" id="submit" name="submit" class="submit" value="Search">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Handle form submission
+        document.getElementById('studentForms').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const course = document.getElementById('course').value;
+            const location = document.getElementById('location').value;
+            
+            // Validate inputs
+            if (!course || !location) {
+                alert('Please select both course and location');
+                return;
+            }
+            
+            // Redirect to results page with query parameters
+            window.location.href = `/static/results.html?course=${encodeURIComponent(course)}&location=${encodeURIComponent(location)}`;
+        });
+    </script>
+</body>
+</html>

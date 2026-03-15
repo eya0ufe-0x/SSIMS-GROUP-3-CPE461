@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Details</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+    
+    <script
+        defer
+        src="https://kit.fontawesome.com/37eb870e00.js"
+        crossorigin="anonymous"
+    ></script>
+    
+    <style>
+        /* Details Page Styling */
+        .details-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .details-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        .back-button-details {
+            background-color: #004080;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button-details:hover {
+            background-color: #003060;
+            transform: translateX(-2px);
+        }
+        
+        .details-header h1 {
+            font-size: 32px;
+            color: #004080;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .details-content {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .details-section {
+            margin-bottom: 25px;
+        }
+        
+        .details-section h2 {
+            font-size: 18px;
+            color: #004080;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .details-section h2 i {
+            font-size: 18px;
+        }
+        
+        .details-section p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .location-info,
+        .slots-info,
+        .status-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .location-info i,
+        .slots-info i,
+        .status-info i {
+            color: #004080;
+            font-size: 16px;
+            min-width: 20px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .status-active {
+            background-color: #e6ffe6;
+            color: #008000;
+        }
+        
+        .status-inactive {
+            background-color: #ffe6e6;
+            color: #c00;
+        }
+        
+        .courses-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .courses-list li {
+            background-color: #f5f5f5;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-left: 3px solid #004080;
+            color: #555;
+            border-radius: 2px;
+        }
+        
+        .courses-list li:before {
+            content: "✓ ";
+            color: #004080;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .apply-button,
+        .back-to-results {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .apply-button {
+            background-color: #004080;
+            color: white;
+        }
+        
+        .apply-button:hover {
+            background-color: #003060;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 64, 128, 0.2);
+        }
+        
+        .back-to-results {
+            background-color: #f0f0f0;
+            color: #555;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .back-to-results:hover {
+            background-color: #e8e8e8;
+            border-color: #d0d0d0;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 18px;
+            color: #7b7b7b;
+        }
+        
+        .error-state {
+            background-color: #fee;
+            border: 1px solid #fcc;
+            border-radius: 4px;
+            padding: 40px;
+            text-align: center;
+            color: #c33;
+        }
+        
+        .error-state i {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .error-state h2 {
+            color: #c33;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .error-state p {
+            color: #c33;
+            margin-bottom: 20px;
+        }
+        
+        .return-link {
+            display: inline-block;
+            background-color: #004080;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .return-link:hover {
+            background-color: #003060;
+        }
+    </style>
+</head>
+<body>
+    <!-- Details Container -->
+    <div class="details-container">
+        <!-- Header with Back Button -->
+        <div class="details-header">
+            <button onclick="window.history.back()" class="back-button-details">←</button>
+            <h1>Company Details</h1>
+        </div>
+        
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <i class="fa-solid fa-spinner fa-spin"></i> Loading company details...
+        </div>
+        
+        <!-- Error State -->
+        <div id="error-state" style="display: none;">
+            <div class="error-state">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <h2>Company Not Found</h2>
+                <p id="error-message">The company you're looking for doesn't exist or has been removed.</p>
+                <a href="/static/results.html" class="return-link">Back to Results</a>
+            </div>
+        </div>
+        
+        <!-- Details Content -->
+        <div id="details-content" style="display: none;">
+            <div class="details-content">
+                <!-- Company Name -->
+                <div class="details-section">
+                    <h2><i class="fa-solid fa-building"></i> <span id="company-name"></span></h2>
+                </div>
+                
+                <!-- Location & Slots -->
+                <div class="details-section">
+                    <div class="location-info">
+                        <i class="fa-solid fa-location-pin"></i>
+                        <span id="company-location"></span>
+                    </div>
+                    <div class="slots-info">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span id="company-slots"></span>
+                    </div>
+                    <div class="status-info">
+                        <i class="fa-solid fa-circle"></i>
+                        <span id="company-status"></span>
+                    </div>
+                </div>
+                
+                <!-- Description -->
+                <div class="details-section">
+                    <h2><i class="fa-solid fa-file-lines"></i> About This Company</h2>
+                    <p id="company-description"></p>
+                </div>
+                
+                <!-- Accepted Courses -->
+                <div class="details-section">
+                    <h2><i class="fa-solid fa-graduation-cap"></i> Accepted Courses</h2>
+                    <ul class="courses-list" id="courses-list"></ul>
+                </div>
+                
+                <!-- Contact Email (Hidden) -->
+                <input type="hidden" id="company-email">
+                
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <a href="#" id="apply-button" class="apply-button">
+                        <i class="fa-solid fa-envelope"></i> Apply Now
+                    </a>
+                    <a href="/static/results.html" class="back-to-results">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Results
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        function getCompanyId() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+        
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Fetch company details from API
+        async function fetchCompanyDetails() {
+            const companyId = getCompanyId();
+            
+            // Validate ID exists
+            if (!companyId) {
+                showError('No company ID provided');
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/api/companies/${companyId}`);
+                
+                if (!response.ok) {
+                    if (response.status === 404) {
+                        throw new Error('Company not found');
+                    }
+                    throw new Error(`API error: ${response.status}`);
+                }
+                
+                const company = await response.json();
+                
+                // Hide loading state
+                document.getElementById('loading').style.display = 'none';
+                
+                // Render company details
+                renderCompanyDetails(company);
+                
+            } catch (error) {
+                console.error('Error fetching company details:', error);
+                
+                // Hide loading state
+                document.getElementById('loading').style.display = 'none';
+                
+                // Show error state
+                const errorMessage = error.message || 'Failed to load company details';
+                showError(errorMessage);
+            }
+        }
+        
+        // Show error state
+        function showError(message) {
+            document.getElementById('error-state').style.display = 'block';
+            document.getElementById('details-content').style.display = 'none';
+            
+            const errorMessageEl = document.getElementById('error-message');
+            if (message) {
+                errorMessageEl.textContent = message;
+            }
+        }
+        
+        // Render company details
+        function renderCompanyDetails(company) {
+            // Set company name
+            document.getElementById('company-name').textContent = escapeHtml(company.name);
+            document.title = `${company.name} - SSIMS`;
+            
+            // Set location
+            const locationEl = document.getElementById('company-location');
+            locationEl.innerHTML = `<strong>${escapeHtml(company.location)}</strong>`;
+            
+            // Set slots
+            const slotsEl = document.getElementById('company-slots');
+            const slotsText = company.slots_available === 1 
+                ? '1 slot available' 
+                : `${company.slots_available} slots available`;
+            slotsEl.textContent = slotsText;
+            
+            // Set status
+            const statusEl = document.getElementById('company-status');
+            const isActive = company.is_active !== false; // Default to active if not specified
+            const statusClass = isActive ? 'status-active' : 'status-inactive';
+            const statusText = isActive ? 'Active' : 'Inactive';
+            statusEl.innerHTML = `<span class="status-badge ${statusClass}">${statusText}</span>`;
+            
+            // Set description
+            const descriptionEl = document.getElementById('company-description');
+            descriptionEl.textContent = escapeHtml(company.description || 'No description available');
+            
+            // Set courses list
+            const coursesList = document.getElementById('courses-list');
+            coursesList.innerHTML = ''; // Clear existing items
+            
+            if (company.courses && company.courses.length > 0) {
+                company.courses.forEach(course => {
+                    const li = document.createElement('li');
+                    li.textContent = escapeHtml(course.name || course);
+                    coursesList.appendChild(li);
+                });
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'All courses accepted';
+                coursesList.appendChild(li);
+            }
+            
+            // Store email for Apply button
+            document.getElementById('company-email').value = company.email || '';
+            
+            // Set Apply button href
+            const applyButton = document.getElementById('apply-button');
+            if (company.email) {
+                applyButton.href = `mailto:${escapeHtml(company.email)}?subject=Application for SIWES Placement at ${encodeURIComponent(company.name)}`;
+            } else {
+                applyButton.href = '#';
+                applyButton.style.opacity = '0.6';
+                applyButton.style.cursor = 'not-allowed';
+                applyButton.onclick = function(e) {
+                    e.preventDefault();
+                    alert('Email not available for this company');
+                    return false;
+                };
+            }
+            
+            // Show details content
+            document.getElementById('details-content').style.display = 'block';
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchCompanyDetails();
+        });
+    </script>
+</body>
+</html>
