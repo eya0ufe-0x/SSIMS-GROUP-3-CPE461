@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+requests
+pytest
+httpx
+playwright
+pytest-playwright

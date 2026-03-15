@@ -1,0 +1,201 @@
+{
+  "courses": [
+    "Computer Engineering",
+    "Electrical Engineering",
+    "Civil Engineering",
+    "Mechanical Engineering",
+    "Chemical Engineering",
+    "Petroleum Engineering"
+  ],
+  "companies": [
+    {
+      "name": "Shell Nigeria",
+      "description": "Multinational oil and gas company.",
+      "location": "Port Harcourt",
+      "slots_available": 10,
+      "email": "careers@shell.com",
+      "status": "Open",
+      "course_names": ["Petroleum Engineering", "Chemical Engineering", "Mechanical Engineering"]
+    },
+    {
+      "name": "NNPC",
+      "description": "Nigerian National Petroleum Corporation.",
+      "location": "Abuja",
+      "slots_available": 15,
+      "email": "careers@nnpc.gov.ng",
+      "status": "Open",
+      "course_names": ["Petroleum Engineering", "Civil Engineering"]
+    },
+    {
+      "name": "Andela",
+      "description": "Global talent network connecting developers.",
+      "location": "Lagos",
+      "slots_available": 5,
+      "email": "apply@andela.com",
+      "status": "Closed",
+      "course_names": ["Computer Engineering"]
+    },
+    {
+      "name": "MTN Nigeria",
+      "description": "Leading telecommunications provider.",
+      "location": "Lagos",
+      "slots_available": 8,
+      "email": "careers@mtn.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering", "Electrical Engineering"]
+    },
+    {
+      "name": "Dangote Group",
+      "description": "Conglomerate in cement, sugar, and more.",
+      "location": "Lagos",
+      "slots_available": 20,
+      "email": "careers@dangote.com",
+      "status": "Open",
+      "course_names": ["Mechanical Engineering", "Chemical Engineering", "Civil Engineering"]
+    },
+    {
+      "name": "Julius Berger",
+      "description": "Construction company.",
+      "location": "Abuja",
+      "slots_available": 12,
+      "email": "jobs@juliusberger.com",
+      "status": "Open",
+      "course_names": ["Civil Engineering"]
+    },
+    {
+      "name": "Chevron Nigeria",
+      "description": "Energy corporation.",
+      "location": "Lagos",
+      "slots_available": 7,
+      "email": "careers@chevron.com",
+      "status": "Closed",
+      "course_names": ["Petroleum Engineering", "Mechanical Engineering"]
+    },
+    {
+      "name": "Globacom",
+      "description": "Telecommunications company.",
+      "location": "Lagos",
+      "slots_available": 6,
+      "email": "jobs@gloworld.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering", "Electrical Engineering"]
+    },
+    {
+      "name": "TotalEnergies",
+      "description": "Broad energy company.",
+      "location": "Port Harcourt",
+      "slots_available": 9,
+      "email": "careers@totalenergies.com",
+      "status": "Open",
+      "course_names": ["Chemical Engineering", "Petroleum Engineering"]
+    },
+    {
+      "name": "Interswitch",
+      "description": "Africa's leading integrated payments company.",
+      "location": "Lagos",
+      "slots_available": 4,
+      "email": "careers@interswitchgroup.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering"]
+    },
+    {
+      "name": "Paystack",
+      "description": "Modern online payments for Africa.",
+      "location": "Lagos",
+      "slots_available": 3,
+      "email": "careers@paystack.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering"]
+    },
+    {
+      "name": "MainOne",
+      "description": "Communications services company.",
+      "location": "Lagos",
+      "slots_available": 5,
+      "email": "careers@mainone.net",
+      "status": "Open",
+      "course_names": ["Electrical Engineering", "Computer Engineering"]
+    },
+    {
+      "name": "Nigerian Breweries",
+      "description": "Largest brewing company in Nigeria.",
+      "location": "Lagos",
+      "slots_available": 8,
+      "email": "careers@nbplc.com",
+      "status": "Open",
+      "course_names": ["Chemical Engineering", "Mechanical Engineering"]
+    },
+    {
+      "name": "Nestle Nigeria",
+      "description": "Food and beverage company.",
+      "location": "Lagos",
+      "slots_available": 6,
+      "email": "careers@nestle.com",
+      "status": "Open",
+      "course_names": ["Chemical Engineering", "Mechanical Engineering"]
+    },
+    {
+      "name": "Oando",
+      "description": "Energy solutions provider.",
+      "location": "Lagos",
+      "slots_available": 5,
+      "email": "careers@oandoplc.com",
+      "status": "Closed",
+      "course_names": ["Petroleum Engineering"]
+    },
+    {
+      "name": "Seplat Energy",
+      "description": "Independent indigenous Nigerian energy company.",
+      "location": "Lagos",
+      "slots_available": 4,
+      "email": "careers@seplatenergy.com",
+      "status": "Open",
+      "course_names": ["Petroleum Engineering", "Mechanical Engineering"]
+    },
+    {
+      "name": "Access Bank",
+      "description": "Multinational commercial bank.",
+      "location": "Lagos",
+      "slots_available": 10,
+      "email": "careers@accessbankplc.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering"]
+    },
+    {
+      "name": "GTBank",
+      "description": "Guaranty Trust Bank.",
+      "location": "Lagos",
+      "slots_available": 8,
+      "email": "careers@gtbank.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering"]
+    },
+    {
+      "name": "First Bank",
+      "description": "Premier West African financial institution.",
+      "location": "Lagos",
+      "slots_available": 7,
+      "email": "careers@firstbanknigeria.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering"]
+    },
+    {
+      "name": "UBA",
+      "description": "United Bank for Africa.",
+      "location": "Lagos",
+      "slots_available": 6,
+      "email": "careers@ubagroup.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering"]
+    },
+    {
+      "name": "Zenith Bank",
+      "description": "Financial services provider.",
+      "location": "Lagos",
+      "slots_available": 9,
+      "email": "careers@zenithbank.com",
+      "status": "Open",
+      "course_names": ["Computer Engineering"]
+    }
+  ]
+}
