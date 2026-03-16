@@ -23,6 +23,14 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+# Add CORS middleware to allow frontend to talk to backend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins for local development
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)            
+    allow_headers=["*"],  # Allows all headers
+)
 
 app.include_router(router, prefix="/api")
 
