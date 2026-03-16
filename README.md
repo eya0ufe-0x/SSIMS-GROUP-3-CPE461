@@ -7,7 +7,7 @@ This document provides a complete overview of the SSIMS web application.
 - AIGBOKHABHO PEACE ODEGWUA - [ENG2204369] – Frontend and Documentation <br>
 - OTUYOMA OROGHENEJERE - [ENG2204044] - Backend and DevOps <br>
 - UKPONG ANDINWAM [ENG2204052] – Sequence and Context Diagrams <br>
-- IYENGUNMWENA EMMANUEL OSARO [ENG2203994] - Development process and immplementation <br>
+- IYENGUNMWENA EMMANUEL OSARO [ENG2203994] - Development process and implementation <br>
 - CHARLES JOSHUA [ENG2203968] - Requirements Engineering and Co-testing <br>
 - ONYEKA CLEVER DUMKELECHUKWU [ENG2204035] -UML and Class Diagrams <br>
 - EHIMARE OSEOJE PRINCE [ENG2102762] - Testing and Validation <br>
