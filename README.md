@@ -261,3 +261,5 @@ graph TD
 **Limitations:** Changes (e.g., adding real database) require going back to earlier phase.
 
 This Waterfall approach ensured the clean, simple frontend was completed perfectly on time.
+
+
