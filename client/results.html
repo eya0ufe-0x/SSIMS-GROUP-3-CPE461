@@ -229,7 +229,7 @@
                 if (course) params.append('course', course);
                 if (location) params.append('location', location);
                 
-                const url = `/api/companies?${params.toString()}`;
+                const url = `http://127.0.0.1:8000/api/companies?${params.toString()}`;
                 
                 const response = await fetch(url);
                 
@@ -292,7 +292,7 @@
                     <i class="fa-solid fa-briefcase"></i> ${slotsText}
                 </div>
                 <p>${escapeHtml(company.description || 'No description available')}</p>
-                <a href="/static/details.html?id=${company.id}" class="details-button">
+                <a href="./details.html?id=${company.id}" class="details-button">
                     View Details
                 </a>
             `;
