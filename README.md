@@ -166,8 +166,7 @@ Development tools: VS Code + Live Server (port 5500).
     </script>
 ```
 
-## 12. README
-## Technologies Used
+## 12. Technologies Used
 - **Backend**: FastAPI (Python web framework)
 - **Database**: SQLite with SQLModel ORM
 - **Frontend**: HTML5, CSS3, Bootstrap 5, Vanilla JavaScript
