@@ -38,7 +38,7 @@ The application is a clean, responsive, mobile-friendly single-page style websit
 ![Testimonials](preview/preview(3).png)  
 ![About SSIMS](preview/preview(4).png)
 ![Student Information Form](preview/preview(5).png)
-![Company Details](preview/preview(7).png)
+![Company Details](preview/preview(6).png)
 
 
 ## 7.UML  Diagram 
